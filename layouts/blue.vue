@@ -1,12 +1,13 @@
 <template>
-  <div class="container2">
+  <div class="container2" >
     <div class="content">
-      <header>
+      <header style="z-index: 1000">
         <nuxt-link to="/">Home</nuxt-link>
         <nuxt-link to="about-us">About Us</nuxt-link>
-        <nuxt-link to="/pictures">Pictures</nuxt-link>
         <nuxt-link to="/find-us">Find Us</nuxt-link>
+        <nuxt-link to="/contact-us">Contact Us</nuxt-link>
       </header>      
+      
       <!-- <p>
         blue layout
       </p> -->
@@ -15,6 +16,11 @@
     <appFooter />
   </div>
 </template>
+
+<script>
+export default {
+}
+</script>
 
 <style lang="scss">
 * {
