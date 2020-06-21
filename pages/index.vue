@@ -3,53 +3,46 @@
     <div id="showcase">
 
       <div class="banner">
-        <h1 class="">Great friendly family barber shop</h1>
-        <h3 class="">
-  by professional staff for all styles - Hair cuts, Shape-Ups, razo shave & hot towel, beard trim. No appointment needed, just pop in.</h3>
+        <h1 class="">Great friendly family <br>barber shop</h1>
+        <h2 class="">
+             by professional staff for all styles <br />Hair cuts, Shape-Ups, razo shave & hot towel, beard trim. <br/>No appointment needed, just pop in.</h2>
       </div>
     </div>
-    <section></section>
-    <v-parallax :src="images[0]">
+    <section>&nbsp;</section>
+    <v-parallax src="/clock1a.jpg" height=600>
       <section id="opening-hours">
-        <time itemprop="openingHours" datetime="Mo-We, Fr 09:00-18:00">Mondays to Wednesdays, Fridays 9am-6.00pm</time>
-        <time itemprop="openingHours" datetime="Th 09:00-18:30">Thursdays 9am-6.30pm</time>
-        <time itemprop="openingHours" datetime="Sa 08:30-17:30">Saturdays 8.30am-5.30pm</time>
-        <time itemprop="openingHours" datetime="Su 09:30-16:00">Sundays 9.30am-4.00pm</time>
+        <time itemprop="openingHours" datetime="Mo-We, Fr 09:00-18:00">Monday 9am-6.00pm</time>
+        <time itemprop="openingHours" datetime="Tu 09:00-18:00">Tuesday 9am-6.00pm</time>
+        <time itemprop="openingHours" datetime="We 09:00-18:00">Wednesday 9am-6.00pm</time>
+        <time itemprop="openingHours" datetime="Th 09:00-18:30">Thursday 9am-6.30pm</time>
+        <time itemprop="openingHours" datetime="Fr 09:00-18:00">Friday 9am-6.00pm</time>
+        <time itemprop="openingHours" datetime="Sa 08:30-17:30">Saturday 8.30am-5.30pm</time>
+        <time itemprop="openingHours" datetime="Su 09:30-16:00">Sunday 9.30am-4.00pm</time>
       </section>
     </v-parallax>
     <!-- <v-parallax src="~assets/img/img1.jpg"></v-parallax> -->
     <section id="">Prices</section>
-    <v-parallax 
-      :src="getImg('img1.jpg')"></v-parallax>
+    <v-parallax height=700 
+      src="/scissors.jpg">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.7263139195184!2d1.128480115764971!3d51.37132787961298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d93562e44b632f%3A0x8e32eeadcda91d61!2s184%20High%20St%2C%20Herne%20Bay%20CT6%205AP!5e0!3m2!1sen!2suk!4v1589709769718!5m2!1sen!2suk" width="600" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </v-parallax>
   </div>
 </template>
 
 <script>
 export default {
-  layout: 'blue',
   components: {
   },
-  methods: {
-    getImg(img) {
-      return require('../assets/img/' + img)
-    }
-  },
+  
   data() {
     return {
-      img1: 'https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-      images: [
-        'https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-        'https://images.pexels.com/photos/128867/coins-currency-investment-insurance-128867.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-        'img1.jpg',
-        'img2.jpg'
-      ]
     }
   }
 }
 </script>
 
-<style lang="scss">
-$bg : rgba(72, 6, 116, 0.61);
+<style lang="scss" >
+$bg : #340652;
 
 .banner {
   background-color: $bg;
@@ -57,25 +50,38 @@ $bg : rgba(72, 6, 116, 0.61);
   color: rgb(236, 236, 236);
   border-radius: 15px;
   width: 100%;
+  letter-spacing: 4px;
+  @media (min-width: 900px) {
+    max-width: 900px;
+  }
 }
-
+section {
+  background: $bg;
+}
 section#opening-hours {
-  background-color: $bg;
-  background-image: url('https://images.pexels.com/photos/9352/glass-time-watch-business.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  padding: 15px;
+  background-color: #250129ec;
+  // background-image: url('https://images.pexels.com/photos/9352/glass-time-watch-business.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   line-height: 1.5;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid rgb(106, 68, 112);
   time {
     letter-spacing: 2px;
-    font-family: Roboto;
+    // font-family: Roboto;
     color: white;
+    font-size: 1.4rem;
   }
 }
 
 #showcase {
-  background-image: url('https://images.pexels.com/photos/3162022/pexels-photo-3162022.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-image: url('/barbers_bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -113,5 +119,12 @@ section#opening-hours {
       background-color: rgb(234, 234, 245);
     }
   }
+}
+
+iframe {
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0.9;
 }
 </style>

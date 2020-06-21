@@ -21,6 +21,11 @@ export default {
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       },
       {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Chelsea+Market&family=Fredericka+the+Great&display=swap'
+      },
+      {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"      
       }
@@ -39,7 +44,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~plugins/core-components'
+    '~plugins/core-components',
+    '~plugins/lightGallery.client',
   ],
   /*
   ** Nuxt.js modules

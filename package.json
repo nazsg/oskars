@@ -5,7 +5,7 @@
   "author": "Naz Sharid",
   "private": true,
   "scripts": {
-    "dev": "nuxt --port 1184",
+    "dev": "nuxt --hostname 0.0.0.0 --port 1184",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
@@ -13,10 +13,12 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/vuetify": "0.5.5",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
-    "vue-cool-lightbox": "^2.1.1"
+    "vue-cool-lightbox": "^2.1.1",
+    "vue-light-gallery": "^1.0.1",
+    "vue-material-design-icons": "^4.6.0"
   },
   "devDependencies": {
     "stylus": "^0.54.5",
