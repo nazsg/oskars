@@ -11,7 +11,7 @@
         <label for="">Message</label> <textarea name="" id="" cols="30" rows="10" v-model="message"></textarea>
       </div>
       <div class="group actions">
-        <SendIcon size=40 /> <DeleteIcon size=40 @click="clear"/>
+        <SendIcon :size=size /> <DeleteIcon :size=size @click="clear"/>
       </div>
     </form>
 
@@ -26,7 +26,8 @@ export default {
   layout: 'blue',
   data() {
     return {
-      name: '', email: '', message: ''
+      name: '', email: '', message: '',
+      size: 40
     }
   },
   methods: {
