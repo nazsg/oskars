@@ -73,17 +73,18 @@ header {
     }
     flex-direction: column;
     position: relative;
+    width: 100%;
     nav {
       position: absolute;
       left: 0;
       top: 45px;
-      z-index: 2;
+      z-index: 5;
       display: none;
       width: 100%;
       ul {
         flex-direction: column;
         width: 100%;
-        background-color: rgb(148, 138, 138);
+        background-color: #340652;
         list-style-type: none;
         margin: 0;
         li {
@@ -91,10 +92,11 @@ header {
           padding: 5px 0;
           width: 100%;
           &:hover {
-            background-color: #885151;
+            background-color: #5c297e;
           }
           a {
-            width: 100%;
+            width: inherit;
+            background-color: rgb(105, 102, 102);
           }
         }
       }

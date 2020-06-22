@@ -3,8 +3,8 @@
     <div id="showcase">
 
       <div class="banner">
-        <h1 class="">Great friendly family <br>barber shop</h1>
-        <h2 class="">
+        <h1>Great friendly family <br>barber shop</h1>
+        <h2>
              by professional staff for all styles <br />Hair cuts, Shape-Ups, razo shave & hot towel, beard trim. <br/>No appointment needed, just pop in.</h2>
       </div>
     </div>
@@ -78,6 +78,9 @@ section#opening-hours {
     color: white;
     font-size: 1.4rem;
   }
+  @media (max-width: 550px) {
+    width: 95%;
+  }
 }
 
 #showcase {
@@ -92,7 +95,7 @@ section#opening-hours {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 
   h1 {
     font-size: 50px;
@@ -117,6 +120,14 @@ section#opening-hours {
     margin-top: 20px;
     &:hover {
       background-color: rgb(234, 234, 245);
+    }
+  }
+  @media (max-width: 550px) {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 18px;
     }
   }
 }
