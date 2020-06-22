@@ -1,18 +1,19 @@
 <template>
       <header>
-        <div>OSKARS BARBERS</div>
-        <a href="#" @click="expand = !expand">
-          <Menu class="menu" />
-        </a>
-        <nav :class="{expand}">
+        <div class="brand">OSKARS BARBERS
+          <a href="#" @click="expand = !expand">
+            <Menu class="toggle" />
+          </a>
+        </div>
+        <nav class="menu" :class="{expand}">
           <ul >
-            <li>            
+            <li @click="expand = false">            
               <nuxt-link to="/">Home</nuxt-link>
             </li>
-            <li>            
+            <li @click="expand = false">            
               <nuxt-link to="/pictures">Pictures</nuxt-link>
             </li>
-            <li>            
+            <li @click="expand = false">            
               <nuxt-link to="/contact-us">Contact Us</nuxt-link>
             </li>
           </ul>
@@ -28,14 +29,10 @@ export default {
       expand: false
     }
   },
-  methods: {
-
-  }
 }
 </script>
 <style lang="scss" scoped>
 .expand {
   display: flex;
-  margin-top: 50px;
 }
 </style>

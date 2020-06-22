@@ -1,7 +1,7 @@
 <template>
-  <div class="container2" >
+  <div class="container2">
     <div class="content">
-      <headerComp />      
+      <headerComp />
       <nuxt />
     </div>
     <appFooter />
@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import headerComp from '~/components/header'
+import headerComp from "~/components/header";
 export default {
   components: { headerComp }
-}
+};
 </script>
 
 <style lang="scss">
@@ -22,7 +22,7 @@ export default {
   // font-family: Roboto;
   // font-family: 'Chelsea Market', cursive;
   // font-family: 'Caveat Brush', cursive;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: "Fredericka the Great", cursive;
 }
 html {
   overflow: auto;
@@ -40,7 +40,6 @@ footer {
 }
 
 header {
-
   display: flex;
   justify-content: space-between;
   background-color: #340652;
@@ -54,7 +53,8 @@ header {
   ul {
     // background-color: #fff;
     display: flex;
-    width: 50%;
+    // width: 50%;
+    padding-left: 0;
     justify-content: space-evenly;
     a {
       color: white;
@@ -63,51 +63,63 @@ header {
       font-size: 1.3rem;
     }
   }
-  .menu {
+  .toggle {
     display: none;
   }
   @media (max-width: 715px) {
+    .brand {
+      display: flex;
+      justify-content: space-between;
+    }
     flex-direction: column;
     position: relative;
     nav {
       position: absolute;
+      left: 0;
+      top: 45px;
       z-index: 2;
-      display: none;    
+      display: none;
       width: 100%;
       ul {
         flex-direction: column;
         width: 100%;
         background-color: rgb(148, 138, 138);
+        list-style-type: none;
+        margin: 0;
         li {
-        width: 100%;
+          margin: 0;
+          padding: 5px 0;
+          width: 100%;
+          &:hover {
+            background-color: #885151;
+          }
           a {
             width: 100%;
           }
         }
       }
     }
-    .menu {
+    .toggle {
       // order: 2;
       display: block;
       color: white;
     }
-    div {
-      // order: 1;
-    }
-  }  
+  }
 }
 
 .pictures {
   section {
+  padding: 20px;
     padding-top: 60px;
     background: none;
-    width: 600px;
-    margin: 0 auto;
+    @media (min-width: 800px) {      
+      width: 600px;
+      margin: 0 auto;
+    }
   }
   height: 100%;
-  background-image: url('/barbers_bg2.jpg');
+  background-image: url("/barbers_bg_light.jpg");
   background-size: cover;
   background-position: bottom left;
 }
-
 </style>
