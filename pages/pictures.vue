@@ -2,9 +2,9 @@
   <div class="pictures">
     <section>
       <h1>Photos</h1>
-      <no-ssr>
+      <client-only>
         <LightGallery :images="images" :index="index" :disable-scroll="true" @close="index = null" />
-      </no-ssr>
+      </client-only>
 
       <ul>
         <li>

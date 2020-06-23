@@ -81,6 +81,9 @@ section#opening-hours {
   @media (max-width: 550px) {
     width: 95%;
   }
+  @media (max-width: 700px) {
+    width: 75%;
+  }
 }
 
 #showcase {

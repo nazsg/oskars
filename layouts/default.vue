@@ -1,5 +1,5 @@
 <template>
-  <div class="container2">
+  <div class="container2" >
     <div class="content">
       <headerComp />
       <nuxt />
@@ -11,7 +11,8 @@
 <script>
 import headerComp from "~/components/header";
 export default {
-  components: { headerComp }
+  components: { headerComp },
+
 };
 </script>
 
@@ -44,6 +45,7 @@ header {
   justify-content: space-between;
   background-color: #340652;
   padding: 10px 20px;
+  border-bottom: 1px solid #5c297e;
   div {
     color: white;
     font-family: Algerian;
@@ -61,6 +63,11 @@ header {
       text-decoration: none;
       letter-spacing: 3px;
       font-size: 1.3rem;
+      display: flex;
+      border-bottom: 2px dotted #340652;
+      &:hover {
+        border-color: #753c9b;
+      }
     }
   }
   .toggle {
@@ -73,11 +80,10 @@ header {
     }
     flex-direction: column;
     position: relative;
-    width: 100%;
     nav {
       position: absolute;
       left: 0;
-      top: 45px;
+      top: 50px;
       z-index: 5;
       display: none;
       width: 100%;
@@ -87,22 +93,24 @@ header {
         background-color: #340652;
         list-style-type: none;
         margin: 0;
+        border-bottom: 1px solid #773aa0;
         li {
-          margin: 0;
-          padding: 5px 0;
-          width: 100%;
+          display: flex;
+          justify-content: center;
           &:hover {
             background-color: #5c297e;
           }
           a {
-            width: inherit;
-            background-color: rgb(105, 102, 102);
+            letter-spacing: 8px;
+            border: none;
+            padding: 7px 0;
+            display: block;
+            width: 100%;
           }
         }
       }
     }
     .toggle {
-      // order: 2;
       display: block;
       color: white;
     }
@@ -111,10 +119,10 @@ header {
 
 .pictures {
   section {
-  padding: 20px;
+    padding: 20px;
     padding-top: 60px;
     background: none;
-    @media (min-width: 800px) {      
+    @media (min-width: 800px) {
       width: 600px;
       margin: 0 auto;
     }
