@@ -4,7 +4,7 @@
     <div class="sum">
       <p>
         find this symbol 
-        <span class="nos" v-html="no1"></span> by clicking below
+        <span class="nos" v-html="no1"></span> below and click it
         <!-- <span class="nos">&#x2b;</span> -->
         <!-- <span class="nos" v-html="no2"></span> -->
         <!-- <span class="nos">&#x3d;</span> -->
@@ -14,7 +14,7 @@
           :id="'n' + c.d"
           @click="check(c.d)"
           class="choices"
-          v-for="(c, index) in choices"
+          v-for="(c, index) in randomChoices"
           :key="index"
           v-html="c.n"
         ></span>
@@ -38,7 +38,12 @@ export default {
     };
   },
   computed: {
-    test() {}
+    test() {},
+    randomChoices() {
+      return this.choices.sort(function() {
+        return .5 - Math.random();
+});
+    }
   },
   methods: {
     check(val) {

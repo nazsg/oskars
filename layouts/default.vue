@@ -17,6 +17,12 @@ export default {
 </script>
 
 <style lang="scss">
+
+@font-face {
+  font-family: 'Algerian';
+  src: url('/alger.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;

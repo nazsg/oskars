@@ -49,7 +49,7 @@ $bg : #340652;
   padding: 30px 20px;
   color: rgb(236, 236, 236);
   border-radius: 15px;
-  width: 100%;
+  width: 60%;
   letter-spacing: 4px;
   @media (min-width: 900px) {
     max-width: 900px;
@@ -67,7 +67,7 @@ section#opening-hours {
   align-items: center;
   justify-content: center;
   line-height: 1.5;
-  width: 50%;
+  // width: 60%;
   text-align: center;
   margin: 0 auto;
   border-radius: 10px;
@@ -87,14 +87,13 @@ section#opening-hours {
 }
 
 #showcase {
-  background-image: url('/barbers_bg.jpg');
+  background-image: url('/barbers_bg_mask.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
-  padding: 0 20px;
+  padding: 0 100px;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
