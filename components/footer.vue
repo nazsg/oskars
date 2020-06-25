@@ -68,6 +68,4 @@ footer {
   }
 }
 
-.footer {
-}
 </style>

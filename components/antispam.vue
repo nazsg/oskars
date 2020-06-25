@@ -42,7 +42,7 @@ export default {
     randomChoices() {
       return this.choices.sort(function() {
         return .5 - Math.random();
-});
+      })
     }
   },
   methods: {

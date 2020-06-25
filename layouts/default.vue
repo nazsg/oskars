@@ -25,7 +25,7 @@ export default {
 
 * {
   margin: 0;
-  padding: 0;
+  // padding: 0;
   // font-family: Roboto;
   // font-family: 'Chelsea Market', cursive;
   // font-family: 'Caveat Brush', cursive;
@@ -46,82 +46,6 @@ footer {
   color: green;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #340652;
-  padding: 10px 20px;
-  border-bottom: 1px solid #5c297e;
-  div {
-    color: white;
-    font-family: Algerian;
-    letter-spacing: 5px;
-    font-size: 1.5rem;
-  }
-  ul {
-    // background-color: #fff;
-    display: flex;
-    // width: 50%;
-    padding-left: 0;
-    justify-content: space-evenly;
-    a {
-      color: white;
-      text-decoration: none;
-      letter-spacing: 3px;
-      font-size: 1.3rem;
-      display: flex;
-      border-bottom: 2px dotted #340652;
-      &:hover {
-        border-color: #753c9b;
-      }
-    }
-  }
-  .toggle {
-    display: none;
-  }
-  @media (max-width: 715px) {
-    .brand {
-      display: flex;
-      justify-content: space-between;
-    }
-    flex-direction: column;
-    position: relative;
-    nav {
-      position: absolute;
-      left: 0;
-      top: 50px;
-      z-index: 5;
-      display: none;
-      width: 100%;
-      ul {
-        flex-direction: column;
-        width: 100%;
-        background-color: #340652;
-        list-style-type: none;
-        margin: 0;
-        border-bottom: 1px solid #773aa0;
-        li {
-          display: flex;
-          justify-content: center;
-          &:hover {
-            background-color: #5c297e;
-          }
-          a {
-            letter-spacing: 8px;
-            border: none;
-            padding: 7px 0;
-            display: block;
-            width: 100%;
-          }
-        }
-      }
-    }
-    .toggle {
-      display: block;
-      color: white;
-    }
-  }
-}
 
 .pictures {
   section {
@@ -138,4 +62,8 @@ header {
   background-size: cover;
   background-position: bottom left;
 }
+
+@import '~/assets/styles/home';
+@import '~/assets/styles/header';
+@import '~/assets/styles/contact-us';
 </style>
