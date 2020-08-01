@@ -33,7 +33,7 @@ footer {
   li:first-child, li:nth-child(2) {
   text-transform: uppercase;
   }
-  font-size: 1.3rem;
+  // font-size: 1.1em;
   width: 100%;
   border-top: 2px solid #5f327e;
   background-color: #340652;

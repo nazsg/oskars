@@ -14,7 +14,7 @@
             :key="thumbIndex"
             @click="index = thumbIndex"
           >
-            <img :src=" '/gallery/pic' + thumb + '_sm.jpg'" />
+            <img :src=" 'gallery/pic' + thumb + '_sm.jpg'" />
           </a>
         </li>
       </ul>
@@ -26,25 +26,26 @@
 export default {
   data() {
     return {
+      path: '/preview/oskars',
       images: [
-        { title: "img 1", url: "/gallery/pic1.jpg" },
-        { title: "img 2", url: "/gallery/pic2.jpg" },
-        { title: "img 3", url: "/gallery/pic3.jpg" },
-        { title: "img 4", url: "/gallery/pic4.jpg" },
-        { title: "img 5", url: "/gallery/pic5.jpg" },
-        { title: "img 6", url: "/gallery/pic6.jpg" },
-        { title: "img 7", url: "/gallery/pic7.jpg" },
-        { title: "img 8", url: "/gallery/pic8.jpg" },
-        { title: "img 9", url: "/gallery/pic9.jpg" },
-        { title: "img 10", url: "/gallery/pic10.jpg" },
-        { title: "img 11", url: "/gallery/pic11.jpg" },
-        { title: "img 12", url: "/gallery/pic12.jpg" },
-        { title: "img 13", url: "/gallery/pic13.jpg" },
-        { title: "img 14", url: "/gallery/pic14.jpg" },
-        { title: "img 15", url: "/gallery/pic15.jpg" },
-        { title: "img 16", url: "/gallery/pic16.jpg" },
-        { title: "img 17", url: "/gallery/pic17.jpg" },
-        { title: "img 18", url: "/gallery/pic18.jpg" },
+        { title: "img 1", url: "gallery/pic1.jpg" },
+        { title: "img 2", url: "gallery/pic2.jpg" },
+        { title: "img 3", url: "gallery/pic3.jpg" },
+        { title: "img 4", url: "gallery/pic4.jpg" },
+        { title: "img 5", url: "gallery/pic5.jpg" },
+        { title: "img 6", url: "gallery/pic6.jpg" },
+        { title: "img 7", url: "gallery/pic7.jpg" },
+        { title: "img 8", url: "gallery/pic8.jpg" },
+        { title: "img 9", url: "gallery/pic9.jpg" },
+        { title: "img 10", url: "gallery/pic10.jpg" },
+        { title: "img 11", url: "gallery/pic11.jpg" },
+        { title: "img 12", url: "gallery/pic12.jpg" },
+        { title: "img 13", url: "gallery/pic13.jpg" },
+        { title: "img 14", url: "gallery/pic14.jpg" },
+        { title: "img 15", url: "gallery/pic15.jpg" },
+        { title: "img 16", url: "gallery/pic16.jpg" },
+        { title: "img 17", url: "gallery/pic17.jpg" },
+        { title: "img 18", url: "gallery/pic18.jpg" },
       ],
       index: null,
       thumbs: [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]

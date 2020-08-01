@@ -26,10 +26,10 @@ export default {
 * {
   margin: 0;
   // padding: 0;
-  // font-family: Roboto;
+  font-family: Roboto;
   // font-family: 'Chelsea Market', cursive;
   // font-family: 'Caveat Brush', cursive;
-  font-family: "Fredericka the Great", cursive;
+  // font-family: "Fredericka the Great", cursive;
 }
 html {
   overflow: auto;
@@ -58,7 +58,7 @@ footer {
     }
   }
   height: 100%;
-  background-image: url("/barbers_bg_light.jpg");
+  background-image: url("https://oskarsbarbers4men.co.uk/img/barbers_bg_light.jpg");
   background-size: cover;
   background-position: bottom left;
 }

@@ -1,6 +1,6 @@
 
 .contact {
-    background-image: url('/email3.jpg');
+    background-image: url('https://oskarsbarbers4men.co.uk/img/email3.jpg');
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
@@ -12,15 +12,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;  
+
+    .submitted {
+      background-color: #bd84d8e1;
+      padding: 20px;
+      border-radius: 10px;
+    }
   }
   form {
+    .disabled {
+      cursor: not-allowed;
+      text-decoration: line-through;
+    }
     width: 99%;
     border: 1px solid #000;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
     font-family: Roboto;
-    background-color: rgba(189, 132, 216, 0.884);
+    background-color: #bd84d8e1;
   
     .group {
       display: flex;
@@ -36,6 +46,7 @@
     }
     input, textarea {
       background-color: rgba(211, 210, 210, 0.863);
+      outline: none;
     }
     .g1 {
       label {
@@ -47,7 +58,18 @@
       flex-direction: column;
     }
     .actions {
+      button {
+        outline: none;
+        border: 1px solid #666;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(211, 206, 206);
+        &:hover {
+          background-color: #fff;
+        }
+      }
       justify-content: space-evenly;
+      text-align: center;
       span {
         color: rgb(75, 73, 73);
         cursor: pointer;
@@ -57,10 +79,17 @@
   
       }
     }
+    .error {
+      color: rgb(252, 247, 247);
+    }
   }
-  $width: 700px;
-  @media (min-width: $width) {
+  @media (min-width: 700px) {
     form {
-      width: $width;
+      width: 650px;
+    }
+  }
+  @media (min-width: 850px) {
+    form {
+      max-width: 750px;
     }
   }

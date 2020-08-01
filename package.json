@@ -16,7 +16,6 @@
     "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
-    "vue-cool-lightbox": "^2.1.1",
     "vue-light-gallery": "^1.0.1",
     "vue-material-design-icons": "^4.6.0"
   },

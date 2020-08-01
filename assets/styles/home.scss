@@ -1,20 +1,10 @@
 $bg : #340652;
 
-.banner {
-  background-color: $bg;
-  padding: 30px 20px;
-  color: rgb(236, 236, 236);
-  border-radius: 15px;
-  width: 60%;
-  letter-spacing: 4px;
-  @media (min-width: 900px) {
-    max-width: 900px;
-  }
-}
+
 section {
   background: $bg;
 }
-section#opening-hours {
+section#opening-hours, #cost {
   background-color: #250129ec;
   // background-image: url('https://images.pexels.com/photos/9352/glass-time-watch-business.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   padding: 25px;
@@ -22,42 +12,80 @@ section#opening-hours {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  line-height: 1.5;
-  // width: 60%;
+  line-height: 1.7;
+  width: 95%;
   text-align: center;
   margin: 0 auto;
   border-radius: 10px;
   border: 1px solid rgb(106, 68, 112);
-  time {
+  time  {
     letter-spacing: 2px;
     // font-family: Roboto;
     color: white;
     font-size: 1.4rem;
   }
-  @media (max-width: 550px) {
-    width: 95%;
+  ul  {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    // justify-content: start;
+    text-align: left;
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
   }
-  @media (max-width: 700px) {
-    width: 75%;
+
+  @media (min-width: 500px) {
+    width: 380px;
+  }
+  @media (min-width: 800px) {
+    // width: 75%;
   }
 }
 
 #showcase {
-  background-image: url('/barbers_bg_mask.jpg');
+  background-image: url('https://oskarsbarbers4men.co.uk/img/barbers_bg_mask.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
-  padding: 0 100px;
+  padding: 0 80px 0 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   // align-items: center;
-
-  h1 {
-    font-size: 50px;
-    line-height: 1.4;
+  .banner {
+    transition: .3s;
+    background-color: #340652e1;
+    padding: 30px 20px;
+    color: rgb(236, 236, 236);
+    border-radius: 15px;
+    width: 90%;
+    letter-spacing: 4px;
+    width: 320px;
+    h1 {
+      font-size: 24px;
+      line-height: 1.4;
+      padding-bottom: 15px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    @media (min-width: 700px) {
+      width: 450px;
+    }
+    @media (min-width: 850px) {
+      width: 570px;
+    }
+    @media (min-width: 900px) {
+      width: 600px;
+    }
   }
 
   p {
@@ -80,14 +108,14 @@ section#opening-hours {
       background-color: rgb(234, 234, 245);
     }
   }
-  @media (max-width: 550px) {
-    h1 {
-      font-size: 30px;
-    }
-    h2 {
-      font-size: 18px;
-    }
-  }
+  // @media (max-width: 550px) {
+  //   h1 {
+  //     font-size: 24px;
+  //   }
+  //   h2 {
+  //     font-size: 18px;
+  //   }
+  // }
 }
 
 iframe {

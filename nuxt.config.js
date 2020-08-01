@@ -14,7 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
         href:
@@ -84,6 +84,10 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      config.resolve.symlinks = false
     }
+  },
+  router: {
+    // base: '/preview/oskars/'
   }
 }
