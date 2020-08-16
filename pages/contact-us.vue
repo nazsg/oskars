@@ -25,6 +25,7 @@
       </div>
       <div class="error">{{ formResult }}</div>
     </form>
+    &nbsp;
 
   </div>
 </template>
@@ -36,6 +37,14 @@ import antispam from '~/components/antispam'
 export default {
   components: { SendIcon, DeleteIcon, antispam },
   layout: 'blue',
+  head: {
+    title: 'Contact Us | Oskars Barbers',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Contact us by sending us an email' }
+    ]
+  },   
   data() {
     return {
       info: {

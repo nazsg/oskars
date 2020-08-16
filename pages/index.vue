@@ -10,30 +10,27 @@
     </div>
     <section>&nbsp;</section>
     <v-parallax src="https://oskarsbarbers4men.co.uk/img/clock1a.jpg" height=600>
-      <section id="opening-hours">
-        <time itemprop="openingHours" datetime="Mo-We, Fr 09:00-18:30">Monday 9am-6.30pm</time>
-        <time itemprop="openingHours" datetime="Tu 09:00-18:30">Tuesday 9am-6.30pm</time>
-        <time itemprop="openingHours" datetime="We 09:00-18:30">Wednesday 9am-6.30pm</time>
-        <time itemprop="openingHours" datetime="Th 09:00-18:30">Thursday 9am-6.30pm</time>
-        <time itemprop="openingHours" datetime="Fr 09:00-18:30">Friday 9am-6.30pm</time>
-        <time itemprop="openingHours" datetime="Sa 08:30-18:00">Saturday 8.30am-6.00pm</time>
-        <time itemprop="openingHours" datetime="Su 09:30-16:00">Sunday 9.30am-4.00pm</time>
+      <section id="opening-hours" itemscope itemtype="http://schema.org/openingHours">
+        <template v-for="(h,index) in hours">
+          <time itemprop="openingHours" :datetime="h.day_code + ' ' + 
+            h.start.slice(0,2) + ':' + h.start.slice(2) + '-' + 
+            h.end.slice(0,2) + ':' + h.end.slice(2)" 
+            :key="index">
+            {{h.day}} {{h.start | convertHours}} to  {{h.end | convertHours }}
+          </time>
+        </template>
       </section>
     </v-parallax>
     <!-- <v-parallax src="~assets/img/img1.jpg"></v-parallax> -->
     <section>&nbsp;</section>
-    <v-parallax src="https://oskarsbarbers4men.co.uk/img/cost.jpg" height=400>
+    <v-parallax src="https://oskarsbarbers4men.co.uk/img/cost.jpg" height=500>
       <section id="cost">
         <ul>
-          <li>Mens Hair Cut <span>&pound;12.00 </span></li>
-          <li>OAP over 65 <span>&pound;9.00</span></li>
-          <li>Kids under 14 <span>&pound;10.00</span></li>
-          <li>All Over <span>&pound;10.00</span></li>
-          <li>Skin Fade <span>&pound;13.00</span></li>
-          <li>Hot towel and wet shave <span>&pound;12.00</span></li>
-          <li>Beard Trim & Shape Up <span>&pound;8.00</span></li>
-          <li>Kids' and OAP's Hair Cut (Sat & Sun) <span>&pound;10.00</span></li>
+          <li v-for="(p,index) in prices" :key="index">
+            {{p.item}} <span>&pound; {{p.price}}</span>
+          </li>
         </ul>
+
       </section>
     </v-parallax>
     <section>&nbsp;</section>
@@ -45,12 +42,54 @@
 </template>
 
 <script>
-export default {
-  
+// import moment from 'moment'
+export default {  
+  head: {
+    title: 'Oskars Barbers, in Herne Bay Kent',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Barbers for men in the high street of Herne Bay in Kent.' }
+    ]
+  },  
   data() {
     return {
-      picker: ''
+      hours: '',
+      prices: '',
+      test1: 'hello'
     }
+  },
+  filters: {
+    convertHours(f) {
+      var timeString = f.slice(0,2) + ':' + f.slice(2)
+      var H = +timeString.substr(0, 2);
+      var h = H % 12 || 12;
+      var ampm = (H < 12 || H === 24) ? "am" : "pm";
+      timeString = h + timeString.substr(2, 3) + ampm;
+      return timeString
+    }
+  },
+  methods: {
+    getHours() {
+      this.$axios.get('https://oskarsbarbers4men.co.uk/indexAPI_hours.php')
+      .then(res => {
+        this.hours = res.data
+      })
+    },
+    getPrices() {
+      this.$axios.get('https://oskarsbarbers4men.co.uk/indexAPI.php')
+      .then(res => {
+        this.prices = res.data
+      })
+    },
+  },
+  mounted() {
+    this.getHours()
+    this.getPrices()
+    // console.log(moment('20200810').format('dddd'))
+    // console.log(moment()) // now
+    // console.log(moment().format('hh:mm LT'))
+    // console.log('convert', moment('1830', 'hh').format('hh:mm:ss LT'))
   }
 }
 </script>

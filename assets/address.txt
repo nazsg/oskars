@@ -11,3 +11,32 @@ Skin Fade, 13.00
 Hot towel and wet shave, 12.00
 Beard Trim & Shape Up, 8.00
 Kids' and OAP's Hair Cut (Sat & Sun), 10.00
+
+
+        <!-- <time itemprop="openingHours" datetime="Mo 09:00-18:30">Monday 9am-6.30pm</time>
+        <time itemprop="openingHours" datetime="Tu 09:00-18:30">Tuesday 9am-6.30pm</time>
+        <time itemprop="openingHours" datetime="We 09:00-18:30">Wednesday 9am-6.30pm</time>
+        <time itemprop="openingHours" datetime="Th 09:00-18:30">Thursday 9am-6.30pm</time>
+        <time itemprop="openingHours" datetime="Fr 09:00-18:30">Friday 9am-6.30pm</time>
+        <time itemprop="openingHours" datetime="Sa 08:30-18:00">Saturday 8.30am-6.00pm</time>
+        <time itemprop="openingHours" datetime="Su 09:30-16:00">Sunday 9.30am-4.00pm</time> -->
+
+                  <!-- <li>Mens Hair Cut <span>&pound;12.00 </span></li>
+          <li>OAP over 65 <span>&pound;9.00</span></li>
+          <li>Kids under 14 <span>&pound;10.00</span></li>
+          <li>All Over <span>&pound;10.00</span></li>
+          <li>Skin Fade <span>&pound;13.00</span></li>
+          <li>Hot towel and wet shave <span>&pound;12.00</span></li>
+          <li>Beard Trim & Shape Up <span>&pound;8.00</span></li>
+          <li>Kids' and OAP's Hair Cut (Sat & Sun) <span>&pound;10.00</span></li> -->
+
+<section id="opening-hours" itemscope itemtype="http://schema.org/openingHours">
+<template v-for="(h,index) in hours">
+        <time itemprop="openingHours" :datetime="h.day_code + ' ' + 
+        h.start.slice(0,2) + ':' + h.start.slice(2) + '-' + 
+        h.end.slice(0,2) + ':' + h.end.slice(2)" 
+        :key="index">
+        {{h.day}} {{h.start}} {{h.end}}
+        </time>
+</template>
+</section>          
