@@ -1,10 +1,11 @@
-$bg : #340652;
+$bg: #340652;
 
-
-section {
+section,
+.section {
   background: $bg;
 }
-section#opening-hours, #cost {
+#opening-hours,
+#cost {
   background-color: #250129ec;
   // background-image: url('https://images.pexels.com/photos/9352/glass-time-watch-business.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   padding: 25px;
@@ -18,13 +19,13 @@ section#opening-hours, #cost {
   margin: 0 auto;
   border-radius: 10px;
   border: 1px solid rgb(106, 68, 112);
-  time  {
+  time {
     letter-spacing: 2px;
     // font-family: Roboto;
     color: white;
     font-size: 1.4rem;
   }
-  ul  {
+  ul {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -61,7 +62,7 @@ section#opening-hours, #cost {
   justify-content: center;
   // align-items: center;
   .banner {
-    transition: .3s;
+    transition: 0.3s;
     background-color: #340652e1;
     padding: 30px 20px;
     color: rgb(236, 236, 236);

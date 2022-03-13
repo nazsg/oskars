@@ -1,20 +1,19 @@
 <template>
   <footer>
     <ul>
+      <li>&copy {{ new Date().getFullYear() }} Oskars Barbers</li>
       <li>
-        &copy {{ new Date().getFullYear() }} Oskars Barbers
+        184 high street Herne Bay, Kent CT6 5AP
       </li>
-      <li>
-        184 high street Herne Bay, Kent CT6 5AP       
-      </li>
-  
+
       <li>
         <phoneIcon />
-        <a href="tel:07447 008787">07447 008787</a> 
-      </li> 
+        <a href="tel:07447008787">07447 008787</a>
+      </li>
       <li>
-        Follow us: <a href="http://www.facebook.com/oskarsbarbers" target="oskars">
-         <Facebook />
+        Follow us:
+        <a href="http://www.facebook.com/oskarsbarbers" target="oskars">
+          <Facebook />
         </a>
       </li>
     </ul>
@@ -24,14 +23,14 @@
 import phoneIcon from 'vue-material-design-icons/Phone.vue'
 import Facebook from 'vue-material-design-icons/Facebook.vue'
 export default {
-  components: { phoneIcon, Facebook }
+  components: { phoneIcon, Facebook },
 }
 </script>
 <style lang="scss" scoped>
-
 footer {
-  li:first-child, li:nth-child(2) {
-  text-transform: uppercase;
+  li:first-child,
+  li:nth-child(2) {
+    text-transform: uppercase;
   }
   // font-size: 1.1em;
   width: 100%;
@@ -67,5 +66,4 @@ footer {
     }
   }
 }
-
 </style>

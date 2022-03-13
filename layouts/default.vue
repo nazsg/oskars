@@ -1,5 +1,5 @@
 <template>
-  <div class="container2" >
+  <div class="container2">
     <div class="content">
       <headerComp />
       <nuxt />
@@ -9,20 +9,24 @@
 </template>
 
 <script>
-import headerComp from "~/components/header";
+import headerComp from '~/components/header'
 export default {
   components: { headerComp },
-
-};
+}
 </script>
 
 <style lang="scss">
-
 @font-face {
   font-family: 'Algerian';
   src: url('/alger.ttf');
 }
-
+* {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  color: white;
+}
 * {
   margin: 0;
   // padding: 0;
@@ -46,7 +50,6 @@ footer {
   color: green;
 }
 
-
 .pictures {
   section {
     padding: 20px;
@@ -58,7 +61,7 @@ footer {
     }
   }
   height: 100%;
-  background-image: url("https://oskarsbarbers4men.co.uk/img/barbers_bg_light.jpg");
+  background-image: url('https://oskarsbarbers4men.co.uk/img/barbers_bg_light.jpg');
   background-size: cover;
   background-position: bottom left;
 }

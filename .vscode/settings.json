@@ -1,3 +1,13 @@
 {
-  "workbench.colorTheme": "One Dark Pro"
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#035e08",
+    "activityBar.foreground" : "#ffebff",
+    "statusBar.foreground" : "#e1f7f7", 
+    "statusBar.background": "#035e08", 
+    "terminal.foreground" : "#e1f7f7", 
+    "terminal.background": "#012903", 
+    "terminalCursor.foreground": "#880fc0", 
+    "titleBar.activeBackground": "#035e08",
+    "tab.activeBackground": "#035e08",
+    }
 }
